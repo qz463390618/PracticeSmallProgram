@@ -10,3 +10,28 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+/**
+ * @param $url string get请求地址
+ * @param int $httpCode 返回状态码
+ * @return mixed
+ */
+function curl_get($url,&$httpCode = 0)
+{
+    //初始化curl
+    $ch = curl_init();
+    //设置 cURL 传输选项.
+    //需要获取的 URL 地址
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+
+    //不做证书校验,部署在linux环境下请改为true
+    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,false);
+    curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,10);
+    //执行 cURL 会话
+    $file_contents = curl_exec($ch);
+    //获取一个cURL连接资源句柄的信息
+    $httpCode = curl_getinfo($ch,CURLINFO_HTTP_CODE);
+    //关闭 cURL 会话
+    curl_close($ch);
+    return $file_contents;
+}

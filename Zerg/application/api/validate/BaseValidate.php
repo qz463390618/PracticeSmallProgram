@@ -48,7 +48,7 @@ class BaseValidate extends Validate
         }
     }
 
-    protected function isEmpty($value,$rule = '',$data = '',$field = '')
+    protected function isNotEmpty($value,$rule = '',$data = '',$field = '')
     {
         if(empty($value))
         {

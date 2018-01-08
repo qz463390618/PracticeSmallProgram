@@ -43,6 +43,6 @@ Route::get('api/:version/product/by_category','api/:version.Product/getAllInCate
 Route::get('api/:version/category/all','api/:version.Category/getAllCatrgories');
 
 //获取Token
-Route::post('api/:version/token/user','api/:version.Token');
+Route::post('api/:version/token/user','api/:version.Token/getToken');
 
 
