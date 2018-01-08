@@ -12,5 +12,24 @@ namespace app\api\model;
 
 class Product extends BaseModel
 {
-    protected $hidden = ['delete_time','update_time','from','create_time'];
+    protected $hidden = ['delete_time','update_time','from','create_time','pivot'];
+
+    public function getMainImgUrlAttr($value,$data)
+    {
+        return $this -> prefixImgUrl($value,$data);
+    }
+
+    public static function getMostRecent($count)
+    {
+        $products = self::limit($count)
+                    ->order('create_time desc')
+                    ->select();
+        return $products;
+    }
+
+    public static function getProductByCategoryID($categoryID)
+    {
+        $products = self::where('category_id','=',$categoryID)->select();
+        return $products;
+    }
 }

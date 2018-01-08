@@ -47,4 +47,14 @@ class BaseValidate extends Validate
             //return $field.'必须是正整数';
         }
     }
+
+    protected function isEmpty($value,$rule = '',$data = '',$field = '')
+    {
+        if(empty($value))
+        {
+            return flase;
+        }else{
+            return true;
+        }
+    }
 }
