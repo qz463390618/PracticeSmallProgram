@@ -1,0 +1,7 @@
+轮播图 :  zero.com/api/v1/banner/1
+首页主题推荐 : zero.com/api/v1/theme
+主题详情 zero.com/api/v1/theme/主题id
+新品推荐 zero.com/api/v1/product/recent
+所有分类 zero.com/api/v1/category/all
+某个分类里的所有商品  zero.com/api/v1/product/by_category?id=分类id
+获取Token zero.com/api/v1/token/user
