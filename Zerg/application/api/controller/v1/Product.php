@@ -16,6 +16,7 @@ use app\lib\exception\ProductException;
 
 class Product
 {
+    //获取新增商品
     public function getRecent($count = 15)
     {
         (new Count()) -> goCheck();
@@ -29,6 +30,7 @@ class Product
         return $products;
     }
 
+    //获取某个分类下的所有商品
     public function getAllInCategory($id)
     {
         (new IDMustBePostiveInt()) -> goCheck();
@@ -39,4 +41,18 @@ class Product
         }
         return $products;
     }
+
+    //获取一个商品的详细信息
+    public function getOne($id)
+    {
+        (new IDMustBePostiveInt()) ->goCheck();
+        $product = ProductModel::getProductDetail($id);
+        //var_dump($product);die;
+        if(!$product)
+        {
+            throw new ProductException();
+        }
+        return $product;
+    }
+
 }

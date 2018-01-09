@@ -5,3 +5,5 @@
 所有分类 zero.com/api/v1/category/all
 某个分类里的所有商品  zero.com/api/v1/product/by_category?id=分类id
 获取Token zero.com/api/v1/token/user
+
+获取某个商品的信息信息    zero.com/api/v1/product/:id

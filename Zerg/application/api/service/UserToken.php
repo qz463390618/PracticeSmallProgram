@@ -9,10 +9,11 @@
 namespace app\api\service;
 
 
+use app\lib\exception\TokenException;
 use app\lib\exception\WeChatException;
 use think\Exception;
 use app\api\model\User as UserModel;
-class UserToken
+class UserToken extends Token
 {
     protected $code;
     protected $wxAppID;
@@ -25,7 +26,7 @@ class UserToken
         $this -> wxAppID = config('wx.app_id');
         $this -> wxAppSecret = config('wx.app_secret');
         /*
-         * sprintf()函数说明
+         * sprintf()函数 说明
          * 把百分号（%）符号替换成一个作为参数进行传递的变量：
          * */
         //拼接微信获取openid路由
@@ -51,7 +52,7 @@ class UserToken
             {
                 $this -> processLoginError($wxResult);
             }else{
-                $this -> granToken($wxResult);
+                return $this -> granToken($wxResult);
             }
         }
     }
@@ -74,13 +75,27 @@ class UserToken
         //如果存在这个用户已经生成,如果不存在则新增一条user记录
         //生成令牌 准备缓存数据,写入缓存
         $cachedValue = $this -> prepareCachedValue($wxResult,$uid);
+        $token = $this -> saveToCache($cachedValue);
+        return $token;
         //把令牌返回到客户端去
+
         //key:令牌
         //value:wxResult,uid,scope
     }
     private  function saveToCache($cachedValue)
     {
-        $key = generateToken();
+        $key = self::generateToken();
+        $value = json_encode($cachedValue);
+        $expire_in = config('setting.token_expire_in');
+        $request = cache($key,$value,$expire_in);
+        if(!$request)
+        {
+            throw new TokenException([
+                'msg' => '服务器缓存异常',
+                'errorCode' => 10005
+            ]);
+        }
+        return $key;
     }
 
     private function prepareCachedValue($wxResult,$uid)

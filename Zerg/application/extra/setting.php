@@ -10,4 +10,5 @@
 return [
     //图片url前缀
     'img_prefix' => 'http://zero.com/images',
+    'token_expire_in' => 7200,
 ];

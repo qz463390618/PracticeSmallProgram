@@ -26,23 +26,20 @@ return [
 
 //轮播图接口
 Route::get('api/:version/banner/:id','api/:version.Banner/getBanner');
-
 //首页主题推荐
 Route::get('api/:version/theme','api/:version.Theme/getSimpleList');
-
 //主题详情
 Route::get('api/:version/theme/:id','api/:version.Theme/getComplexOne');
-
-//新品推荐
-Route::get('api/:version/product/recent','api/:version.Product/getRecent');
-
 //获取某个分类里的所有商品
 Route::get('api/:version/product/by_category','api/:version.Product/getAllInCategory');
-
+//新品推荐
+Route::get('api/:version/product/recent','api/:version.Product/getRecent');
+Route::get('api/:version/product/:id','api/:version.Product/getOne',[],['id' => '\d+']);
 //获取所有分类
 Route::get('api/:version/category/all','api/:version.Category/getAllCatrgories');
-
 //获取Token
 Route::post('api/:version/token/user','api/:version.Token/getToken');
+//新增或修改地址
+Route::post('api/:version/address','app/:version.Address/createOrUpdateAddress');
 
 
