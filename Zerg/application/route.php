@@ -40,6 +40,6 @@ Route::get('api/:version/category/all','api/:version.Category/getAllCatrgories')
 //获取Token
 Route::post('api/:version/token/user','api/:version.Token/getToken');
 //新增或修改地址
-Route::post('api/:version/address','app/:version.Address/createOrUpdateAddress');
+Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress');
 
 

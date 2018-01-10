@@ -7,3 +7,6 @@
 获取Token zero.com/api/v1/token/user
 
 获取某个商品的信息信息    zero.com/api/v1/product/:id
+
+收货地址 添加或更新
+zero.com/api/v1/address

@@ -82,6 +82,7 @@ class UserToken extends Token
         //key:令牌
         //value:wxResult,uid,scope
     }
+    //把令牌保存到缓存中
     private  function saveToCache($cachedValue)
     {
         $key = self::generateToken();
@@ -97,7 +98,7 @@ class UserToken extends Token
         }
         return $key;
     }
-
+    //
     private function prepareCachedValue($wxResult,$uid)
     {
         $cachedValue = $wxResult;
