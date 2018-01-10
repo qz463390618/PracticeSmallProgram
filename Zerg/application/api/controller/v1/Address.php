@@ -34,13 +34,6 @@ class Address
         }
         $dataArray = $validate->getDataByRule(input('post.'));
         $userAddress = $user -> address;
-        /*if(!$userAddress)
-        {
-            echo 2312;
-        }else{
-            echo 31231;
-        }
-        die;*/
         if(!$userAddress)
         {
             //如果查询用户不存在地址属性则新增

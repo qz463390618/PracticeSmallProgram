@@ -2,37 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789d57f2-cae1-45b2-a303-efe0e6723230" name="默认的" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/api路由.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/.gitignore" afterPath="$PROJECT_DIR$/Zerg/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/.travis.yml" afterPath="$PROJECT_DIR$/Zerg/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/LICENSE.txt" afterPath="$PROJECT_DIR$/Zerg/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/README.md" afterPath="$PROJECT_DIR$/Zerg/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/controller/v1/Address.php" afterPath="$PROJECT_DIR$/Zerg/application/api/controller/v1/Address.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/model/BannerItem.php" afterPath="$PROJECT_DIR$/Zerg/application/api/model/BannerItem.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/model/BaseModel.php" afterPath="$PROJECT_DIR$/Zerg/application/api/model/BaseModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/model/Image.php" afterPath="$PROJECT_DIR$/Zerg/application/api/model/Image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/model/User.php" afterPath="$PROJECT_DIR$/Zerg/application/api/model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/service/Token.php" afterPath="$PROJECT_DIR$/Zerg/application/api/service/Token.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/service/UserToken.php" afterPath="$PROJECT_DIR$/Zerg/application/api/service/UserToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/validate/AddressNew.php" afterPath="$PROJECT_DIR$/Zerg/application/api/validate/AddressNew.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/api/validate/BaseValidate.php" afterPath="$PROJECT_DIR$/Zerg/application/api/validate/BaseValidate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/command.php" afterPath="$PROJECT_DIR$/Zerg/application/command.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/config.php" afterPath="$PROJECT_DIR$/Zerg/application/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/route.php" afterPath="$PROJECT_DIR$/Zerg/application/route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/application/tags.php" afterPath="$PROJECT_DIR$/Zerg/application/tags.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/build.php" afterPath="$PROJECT_DIR$/Zerg/build.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/composer.json" afterPath="$PROJECT_DIR$/Zerg/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/error_code" afterPath="$PROJECT_DIR$/Zerg/error_code" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/extend/.gitignore" afterPath="$PROJECT_DIR$/Zerg/extend/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/public/.htaccess" afterPath="$PROJECT_DIR$/Zerg/public/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/public/index.php" afterPath="$PROJECT_DIR$/Zerg/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/public/robots.txt" afterPath="$PROJECT_DIR$/Zerg/public/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/public/router.php" afterPath="$PROJECT_DIR$/Zerg/public/router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/public/static/.gitignore" afterPath="$PROJECT_DIR$/Zerg/public/static/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/runtime/.gitignore" afterPath="$PROJECT_DIR$/Zerg/runtime/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/think" afterPath="$PROJECT_DIR$/Zerg/think" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zerg/vendor/.gitignore" afterPath="$PROJECT_DIR$/Zerg/vendor/.gitignore" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +19,7 @@
       <file leaf-file-name="route.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zerg/application/route.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="460">
               <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
               <folding>
                 <element signature="e#613#848#0#PHP" expanded="false" />
@@ -59,18 +31,18 @@
       <file leaf-file-name="BannerItem.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/BannerItem.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="276">
               <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Address.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Address.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zerg/application/api/controller/v1/Address.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            <state relative-caret-position="356">
+              <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
               <folding>
                 <element signature="e#113#145#0#PHP" expanded="true" />
               </folding>
@@ -81,20 +53,18 @@
       <file leaf-file-name="Token.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/Token.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
-              <caret line="58" column="24" lean-forward="false" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-              <folding>
-                <element signature="e#107#144#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="1242">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserToken.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserToken.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/UserToken.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
+            <state relative-caret-position="506">
+              <caret line="106" column="35" lean-forward="true" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -103,18 +73,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="207">
               <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAddress.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/UserAddress.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -123,7 +83,7 @@
       <file leaf-file-name="AddressNew.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zerg/application/api/validate/AddressNew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="230">
               <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding />
             </state>
@@ -133,8 +93,8 @@
       <file leaf-file-name="BaseValidate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Zerg/application/api/validate/BaseValidate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+            <state relative-caret-position="2001">
+              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,7 +123,6 @@
         <option value="$PROJECT_DIR$/Zerg/application/extra/setting.php" />
         <option value="$PROJECT_DIR$/Zerg/application/lib/exception/TokenException.php" />
         <option value="$PROJECT_DIR$/Zerg/application/api/controller/v1/Token.php" />
-        <option value="$PROJECT_DIR$/Zerg/application/api/service/UserToken.php" />
         <option value="$PROJECT_DIR$/Zerg/runtime/cache/de/0fd5ffa82852687728353e149b0a0e.php" />
         <option value="$PROJECT_DIR$/Zerg/application/api/model/ProductImage.php" />
         <option value="$PROJECT_DIR$/Zerg/application/api/model/ProductProperty.php" />
@@ -181,6 +140,7 @@
         <option value="$PROJECT_DIR$/Zerg/application/api/service/Token.php" />
         <option value="$PROJECT_DIR$/Zerg/application/api/model/User.php" />
         <option value="$PROJECT_DIR$/Zerg/application/api/controller/v1/Address.php" />
+        <option value="$PROJECT_DIR$/Zerg/application/api/service/UserToken.php" />
       </list>
     </option>
   </component>
@@ -197,10 +157,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="y" value="2" />
+    <option name="width" value="1932" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="添加" />
@@ -221,7 +181,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -280,77 +239,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="201801" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zerg" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zerg" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exception" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zerg" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extra" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,10 +262,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="validate" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -406,64 +291,9 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zerg" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PracticeSmallProgram" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Zerg" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="v1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -575,25 +405,27 @@
       <workItem from="1515460554986" duration="16292000" />
       <workItem from="1515545772403" duration="604000" />
       <workItem from="1515553702899" duration="9419000" />
+      <workItem from="1515586013048" duration="913000" />
+      <workItem from="1515589133686" duration="1265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51044000" />
+    <option name="totallyTimeSpent" value="53222000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12864584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12839249" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33756614" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -776,13 +608,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/runtime/cache/de/0fd5ffa82852687728353e149b0a0e.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="75" lean-forward="false" selection-start-line="3" selection-start-column="75" selection-end-line="3" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/runtime/cache/de/0fd5ffa82852687728353e149b0a0e.php" />
     <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/ProductProperty.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -801,9 +627,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="e#514#1291#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -811,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,67 +651,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/application/api/validate/UserException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/api/validate/UserException.php" />
     <entry file="file://$PROJECT_DIR$/Zerg/application/lib/exception/TokenException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/application/lib/exception/UserException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/lib/exception/UserException.php" />
+    <entry file="file://$PROJECT_DIR$/Zerg/composer.lock" />
     <entry file="file://$PROJECT_DIR$/Zerg/error_code">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/runtime/cache/05/3dc3e78c771ef627674a0fc5b96d39.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="3" column="110" lean-forward="true" selection-start-line="3" selection-start-column="110" selection-end-line="3" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/runtime/cache/1c/cc4b2fcc1b1aafb19c5ed3d8d685af.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="3" column="110" lean-forward="true" selection-start-line="3" selection-start-column="110" selection-end-line="3" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/runtime/cache/05/3dc3e78c771ef627674a0fc5b96d39.php" />
+    <entry file="file://$PROJECT_DIR$/Zerg/runtime/cache/1c/cc4b2fcc1b1aafb19c5ed3d8d685af.php" />
     <entry file="file://$PROJECT_DIR$/Zerg/application/lib/exception/ParameterException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -897,21 +681,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/application/lib/exception/SuccessMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/lib/exception/SuccessMessage.php" />
     <entry file="file://$PROJECT_DIR$/Zerg/application/api/validate/AddressNew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="230">
           <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding />
         </state>
@@ -919,31 +695,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Zerg/application/api/validate/BaseValidate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="79" column="37" lean-forward="false" selection-start-line="79" selection-start-column="37" selection-end-line="79" selection-end-column="37" />
+        <state relative-caret-position="2001">
+          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/BannerItem.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="276">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/UserAddress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/UserAddress.php" />
     <entry file="file://$PROJECT_DIR$/Zerg/application/route.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="460">
           <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding>
             <element signature="e#613#848#0#PHP" expanded="false" />
@@ -951,27 +720,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/UserToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="38" selection-end-line="65" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/Token.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="58" column="24" lean-forward="false" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-          <folding>
-            <element signature="e#107#144#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="1242">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Zerg/application/api/model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="207">
           <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
@@ -979,11 +738,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Zerg/application/api/controller/v1/Address.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        <state relative-caret-position="356">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
           <folding>
             <element signature="e#113#145#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Zerg/application/api/service/UserToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="106" column="35" lean-forward="true" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
