@@ -42,4 +42,5 @@ Route::post('api/:version/token/user','api/:version.Token/getToken');
 //新增或修改地址
 Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress');
 
-
+//下单
+Route::post('api/:version/order','api/:version.Order/placeOrder');
