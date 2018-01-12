@@ -11,6 +11,7 @@ namespace app\api\controller\v1;
 
 
 use app\api\controller\BaseController;
+use app\api\validate\OrderPlace;
 
 class Order extends BaseController
 {
@@ -23,13 +24,12 @@ class Order extends BaseController
     //微信返回给我们一个支付结果
     //成功:也需要进行库存量的检测
     //成功:进行库存量的扣除, 失败:返回一个支付失败的结果
-
     protected $beforeActionList = [
         'checkExclusiveScope' => ['only' =>'placeOrder']
     ];
 
     public function placeOrder()
     {
-
+        (new OrderPlace()) -> goCheck();
     }
 }
