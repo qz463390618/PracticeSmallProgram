@@ -13,3 +13,6 @@ zero.com/api/v1/address
 
 ÏÂµ¥
 zero.com/api/v1/order
+
+Ô¤¶©µ¥
+zero.com/api/v1/pay/pre_order

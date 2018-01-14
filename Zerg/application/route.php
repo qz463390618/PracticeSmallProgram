@@ -44,3 +44,10 @@ Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress')
 
 //下单
 Route::post('api/:version/order','api/:version.Order/placeOrder');
+
+//预订单
+Route::post('api/:version/pay/pre_order','api/:version.Pay/getPreOrder');
+
+
+//测试删除
+Route::post('api/:version/order/del','api/:version.Order/del');
