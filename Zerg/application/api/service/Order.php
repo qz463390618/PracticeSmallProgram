@@ -128,6 +128,7 @@ class Order
         return $snap;
     }
 
+    //获取用户收货地址
     private function getUserAddress()
     {
         $userAddres = UserAddress::where('user_id','=',$this -> uid)->find();
@@ -155,6 +156,19 @@ class Order
         return $products;
     }
 
+    //检测订单库存
+    public function checkOrderStock($orderID)
+    {
+        $oProducts = OrderProduct::where('order_id','=',$orderID)
+            ->select();
+        $this -> oProducts = $oProducts;
+        $this -> products = $this ->getProductsByOrder($this -> oProducts);
+        $status = $this ->getOrderStatus();
+        return $status;
+    }
+
+
+    //获取订单状态
     private function getOrderStatus()
     {
         $status = [

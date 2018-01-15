@@ -55,7 +55,6 @@ class Token
         }
     }
 
-
     //获取token 中的 uid值
     public static function getCurrentUid()
     {
@@ -96,5 +95,20 @@ class Token
         }else{
             throw new TokenException();
         }
+    }
+
+    //检测是否是一个合法的操作
+    public static function isValidOperate($checkedUID)
+    {
+        if(!$checkedUID)
+        {
+            throw new Exception('检测UID时必须传入一个被检查的UID');
+        }
+        $currentOperateUID = self::getCurrentUid();//请求用户的uid
+        if($currentOperateUID == $checkedUID)
+        {
+            return true;
+        }
+        return false;
     }
 }

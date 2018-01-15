@@ -10,5 +10,9 @@
 return [
     //图片url前缀
     'img_prefix' => 'http://zero.com/images',
+    //token时效
     'token_expire_in' => 7200,
+    //店铺名
+    'shop_name' => '零食商贩',
+
 ];

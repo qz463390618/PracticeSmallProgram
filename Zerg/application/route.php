@@ -46,7 +46,7 @@ Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress')
 Route::post('api/:version/order','api/:version.Order/placeOrder');
 
 //预订单
-Route::post('api/:version/pay/pre_order','api/:version.Pay/getPreOrder');
+Route::post('api/:version/pay/pre_order','api/:version.Pay/getPerOrder');
 
 
 //测试删除
