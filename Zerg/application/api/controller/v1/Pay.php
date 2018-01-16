@@ -23,6 +23,21 @@ class Pay extends BaseController
     {
         (new IDMustBePostiveInt()) -> goCheck();
         $pay = new PayService($id);
-        $pay ->pay();
+        return $pay ->pay();
+    }
+
+    //接收微信的通知
+    public function receiveNotify()
+    {
+        //通知频率为 15/15/30/180/1800/1800/1800/1800/3600  单位:秒
+
+        // 1.检查库存量,超卖
+        // 2.更新这个订单的status状态
+        // 3.减库存
+        // 如果成功处理,我们返回微信成功处理的信息  否者,我们需要返回没有成功处理信息
+
+        //特点 :post请求;  xml格式;  不能携带参数;
+
+
     }
 }

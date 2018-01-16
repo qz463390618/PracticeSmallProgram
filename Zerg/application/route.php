@@ -47,7 +47,8 @@ Route::post('api/:version/order','api/:version.Order/placeOrder');
 
 //预订单
 Route::post('api/:version/pay/pre_order','api/:version.Pay/getPerOrder');
-
+//微信回调地址
+Route::post('api/:version/pay/notify','api/:version.Pay/receiveNotify');
 
 //测试删除
 Route::post('api/:version/order/del','api/:version.Order/del');

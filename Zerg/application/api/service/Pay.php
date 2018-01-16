@@ -79,6 +79,7 @@ class Pay
         return $this -> getPaySignature($wxOrderData);
     }
 
+    //向微信请求订单号并生成签名
     private function getPaySignature($wxOrderData)
     {
         $wxOrder = \WxPayApi::unifiedOrder($wxOrderData);
@@ -87,9 +88,41 @@ class Pay
             Log::record($wxOrder,'error');
             Log::record('获取预支付订单失败','');
         }
-        return null;
+        //prepay_id
+        $this -> recordPreOrder($wxOrder);
+        $signature = $this->sign($wxOrder);
+        return $signature;
     }
 
+    //签名
+    private function sign($wxOrder)
+    {
+        $jsApiPayData = new \WxPayJsApiPay();
+        //随机字符串
+        $jsApiPayData -> SetAppid(config('wx.app_id'));
+        //设置时间戳
+        $jsApiPayData -> SetTimeStamp((string)time());
+        $rand = md5(time() . mt_rand(0,1000) );
+        $jsApiPayData -> SetNonceStr($rand);
+        //设置微信预订单id
+        $jsApiPayData -> SetPackage('prepay_id = '.$wxOrder['prepay_id']);
+        //设置签名算法
+        $jsApiPayData -> SetSignType('md5');
+        $sign = $jsApiPayData -> MakeSign();
+        $rawValues = $jsApiPayData -> GetValues();
+        $rawValues['paySign'] = $sign;
+        unset($rawValues['appId']);
+        return $rawValues;
+    }
+
+
+    private function recordPreOrder($wxOrder)
+    {
+        OrderModel::where('id','=',$this -> orderID)
+            -> update([
+                'prepay_id' => $wxOrder['prepay_id']
+            ]);
+    }
 
 
     //检测订单

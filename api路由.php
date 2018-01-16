@@ -16,3 +16,6 @@ zero.com/api/v1/order
 
 预订单
 zero.com/api/v1/pay/pre_order
+
+微信回调
+zero.com/api/v1/pay/notify
