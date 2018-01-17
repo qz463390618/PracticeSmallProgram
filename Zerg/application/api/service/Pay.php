@@ -75,7 +75,7 @@ class Pay
         //用户标识
         $wxOrderData -> SetOpenid($openid);
         //通知地址
-        $wxOrderData ->SetNotify_url('http://qq.com');
+        $wxOrderData ->SetNotify_url(config('secure.pay_back_url '));
         return $this -> getPaySignature($wxOrderData);
     }
 
