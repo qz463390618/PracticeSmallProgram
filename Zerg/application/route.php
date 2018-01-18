@@ -44,11 +44,20 @@ Route::post('api/:version/address','api/:version.Address/createOrUpdateAddress')
 
 //下单
 Route::post('api/:version/order','api/:version.Order/placeOrder');
+//获取某个订单的详情
+Route::get('api/:version/order/:id','api/:version.Order/getDetail',[],['id'=>'\d+']);
+//获取用户所有订单
+Route::get('api/:version/order/by_user','api/:version.Order/getSummaryByUser');
+
 
 //预订单
 Route::post('api/:version/pay/pre_order','api/:version.Pay/getPerOrder');
 //微信回调地址
 Route::post('api/:version/pay/notify','api/:version.Pay/receiveNotify');
+
+
+
+
 
 //测试删除
 Route::post('api/:version/order/del','api/:version.Order/del');

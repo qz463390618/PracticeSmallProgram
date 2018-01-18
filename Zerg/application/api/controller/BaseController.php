@@ -15,7 +15,7 @@ use app\api\service\Token as TokenService;
 
 class BaseController extends Controller
 {
-    //前置方法,验证用户是否包含权限
+    //前置方法,验证用户是否包含权限,全部可以访问的权限
     protected function checkPrimaryScope()
     {
         TokenService::needPrimaryScope();

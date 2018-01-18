@@ -11,9 +11,13 @@ namespace app\api\controller\v1;
 
 
 use app\api\controller\BaseController;
+use app\api\validate\IDMustBePostiveInt;
 use app\api\validate\OrderPlace;
 use app\api\service\Token as TokenService;
 use app\api\service\Order as OrderService;
+use app\api\validate\PagingParameter;
+use app\api\model\Order as OrderModel;
+use app\lib\exception\OrderException;
 
 class Order extends BaseController
 {
@@ -28,7 +32,8 @@ class Order extends BaseController
     //成功:也需要进行库存量的检测
     //成功:进行库存量的扣除, 失败:返回一个支付失败的结果
     protected $beforeActionList = [
-        'checkExclusiveScope' => ['only' =>'placeOrder']
+        'checkExclusiveScope' => ['only' =>'placeOrder'],
+        'checkPrimaryScope' => ['only' => 'getDetail,getSummaryByUser'],
     ];
 
     //创建订单
@@ -42,9 +47,36 @@ class Order extends BaseController
         return $status;
     }
 
+    //查询用户所有订单,并且分页
+    public function getSummaryByUser($page = 1,$size = 15)
+    {
+        (new PagingParameter()) -> goCheck();
+        $uid = TokenService::getCurrentUid();
+        $pagingOrders = OrderModel::getSummaryByUser($uid,$page,$size);
+        if($pagingOrders ->isEmpty())
+        {
+            return [
+                'data' => null,
+                'current_page' => $pagingOrders -> getCurrentPage()
+            ];
+        }
+        $data = $pagingOrders->hidden(['snap_items','snap_address','prepay_id'])->toArray();
+        return [
+            'data' => $data,
+            'current_page' => $pagingOrders -> getCurrentPage()
+        ];
+    }
 
-
-
+    //获取某个订单的详情
+    public function getDetail($id)
+    {
+        (new IDMustBePostiveInt()) -> goCheck();
+        $orderDetail = OrderModel::get($id);
+        if(!$orderDetail){
+            throw new OrderException();
+        }
+        return $orderDetail -> hidden(['prepay_id']);
+    }
 
 
 
