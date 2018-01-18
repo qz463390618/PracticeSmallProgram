@@ -1,4 +1,5 @@
 
+import {Config} from '../utils/config.js';
 
 class Base{
   constructor(){
@@ -23,7 +24,7 @@ class Base{
         // if (params.sCallBack){
         //   params.sCallBack(res);
         // }
-        params.sCallBack && params.sCallBack(res);
+        params.sCallBack && params.sCallBack(res.data);
       },
       //失败返回提示
       fail:function(err){
@@ -31,6 +32,6 @@ class Base{
       }
     })
   }
-
-
 }
+
+export {Base};

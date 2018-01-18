@@ -118,6 +118,7 @@ class Pay
 
     private function recordPreOrder($wxOrder)
     {
+        var_dump($wxOrder);
         OrderModel::where('id','=',$this -> orderID)
             -> update([
                 'prepay_id' => $wxOrder['prepay_id']
