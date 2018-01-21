@@ -6,6 +6,7 @@ class Base{
     this.baseRequestUrl = Config.restUrl; 
   }
 
+  //重新封装 wx.request()方法
   request(params){
     var url = this.baseRequestUrl + params.url;
     if (!params.type){
@@ -24,7 +25,7 @@ class Base{
         // if (params.sCallBack){
         //   params.sCallBack(res);
         // }
-        params.sCallBack && params.sCallBack(res.data);
+        params.sCallback && params.sCallback(res.data);
       },
       //失败返回提示
       fail:function(err){
@@ -32,6 +33,12 @@ class Base{
       }
     })
   }
+
+  //获得元素上的绑定的值
+  getDataSet(event,key){
+    return event.currentTarget.dataset[key];
+  }
+
 }
 
 export {Base};

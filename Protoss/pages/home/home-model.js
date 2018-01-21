@@ -5,23 +5,39 @@ class Home extends Base{
     super();
   }
 
-  getBannerData(id,callBack){
-    var params = {
+  //获取轮播图信息
+  getBannerData(id,callback){
+    var param = {
       url:'banner/'+id,
-      sCallBack:function(res){
-        callBack && callBack(res.items);
+      sCallback:function(res){
+        callback && callback(res.items);
       }
     };
-    this.request(params);
-    // wx.request({
-    //   url: "http://zero.com/api/v1/banner/" + id,
-    //   method:'GET',
-    //   success:function(res){
-    //     //return res;
-    //     callBack(res);
-    //   }
-    // })
+    this.request(param);
   }
+  //获取主题信息
+  getThemeData(callback){
+    var param = {
+      url:'theme?ids=1,2,3',
+      sCallback:function(res){
+        callback && callback(res);
+      }
+    };
+    this.request(param);
+  }
+
+  //获取商品列表信息
+  getProductsData(callback){
+    var param = {
+      url:'product/recent',
+      sCallback:function(res){
+        callback && callback(res);
+      }
+    }
+    this.request(param);
+  }
+  
+
 }
 
 export {Home};

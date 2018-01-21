@@ -58,6 +58,7 @@ class Pay
     private function makeWxPreOrder($totalPrice)
     {
         //openid
+        //var_dump($totalPrice);
         $openid = TokenService::getCurrenTokenVar('openid');
         if(!$openid)
         {
@@ -69,13 +70,13 @@ class Pay
         //订单类型
         $wxOrderData -> SetTrade_type('JSAPI');
         //订单总金额
-        $wxOrderData -> SetTotal_fee($totalPrice*100);
+        $wxOrderData -> SetTotal_fee($totalPrice * 100);
         //商品描述
         $wxOrderData -> SetBody(config('setting.shop_name'));
         //用户标识
         $wxOrderData -> SetOpenid($openid);
         //通知地址
-        $wxOrderData ->SetNotify_url(config('secure.pay_back_url '));
+        $wxOrderData ->SetNotify_url(config('secure.pay_back_url'));
         return $this -> getPaySignature($wxOrderData);
     }
 
@@ -86,7 +87,7 @@ class Pay
         if($wxOrder['return_code'] != 'SUCCESS' || $wxOrder['result_code'] != 'SUCCESS')
         {
             Log::record($wxOrder,'error');
-            Log::record('获取预支付订单失败','');
+            Log::record('获取预支付订单失败','error');
         }
         //prepay_id
         $this -> recordPreOrder($wxOrder);
