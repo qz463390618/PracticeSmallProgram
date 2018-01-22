@@ -39,7 +39,7 @@ class Product
         {
             throw new ProductException();
         }
-        return $products;
+        return $products->hidden(['summary','category_id']);
     }
 
     //获取一个商品的详细信息

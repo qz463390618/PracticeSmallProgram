@@ -43,15 +43,28 @@
   <view class="detail-bottom-box">
 
     <view class="tabs-box">
-      <block wx:for="{{['商品详情','产品参数','售后保障']}}">
+      <block wx:for="{{['商品详情','产品参数','售后保障']}}" wx:key="">
         <view class="tabs-item {{currentTabsIndex == index ? 'selected': ''}}" bindtap="onTapsItemTab" data-index="{{index}}">{{item}}</view>
       </block>
     </view>
 
     <view class="product-detail-box">
-      <view hidden="{{currentTabsIndex != 0}}">detail</view>
-      <view hidden="{{currentTabsIndex != 1}}">param</view>
-      <view hidden="{{currentTabsIndex != 2}}">sale</view>
+      <view class="product-detail-imgs" hidden="{{currentTabsIndex != 0}}">
+        <block wx:for="{{productInfo.imgs}}" wx:key="">
+          <image src="{{item.img_url.url}}"></image>
+        </block>
+      </view>
+      <view class="product-detail-properties" hidden="{{currentTabsIndex != 1}}">
+        <block wx:for="{{productInfo.properties}}" wx:key="">
+          <view class="properties-item">
+            <view class="properties-name">{{item.name}}</view>
+            <view class="properties-detail">{{item.detail}}</view>
+          </view>
+        </block>
+      </view>
+      <view class="product-detail-protect" hidden="{{currentTabsIndex != 2}}">
+        <view>七天无理由退货</view>
+      </view>
     </view>
   </view>
 </view>

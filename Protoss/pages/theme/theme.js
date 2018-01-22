@@ -37,5 +37,12 @@ Page({
         'themeInfo':res
       });
     });
-  }
+  },
+  //跳转商品详情
+  onProductsItemTap: function (event) {
+    var id = theme.getDataSet(event, 'id');
+    wx.navigateTo({
+      url: '../product/product?id=' + id,//页面跳转路径
+    });
+  },
 })
