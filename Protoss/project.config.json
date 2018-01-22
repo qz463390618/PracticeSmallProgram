@@ -26,8 +26,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "启动商品详情页面",
+					"pathName": "pages/product/product",
+					"query": "id=11"
+				}
+			]
 		}
 	}
 }

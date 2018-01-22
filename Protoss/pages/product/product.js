@@ -7,7 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    id:null
+    id:null,
+    countsArray:[1,2,3,4,5,6,7,8,9,10],
+    productCounts:1,
+    currentTabsIndex:0,
   },
 
   /**
@@ -26,5 +29,22 @@ Page({
         'productInfo': res
       });
     });
-  }
+  },
+
+  //当选项卡的值发生改变事的函数
+  bindPickerChange:function(event){
+    var index = event.detail.value;
+    var selectedCount = this.data.countsArray[index];
+    this.setData({
+      'productCounts':selectedCount
+    });
+  },
+  
+  //当点击选项卡时的函数
+  onTapsItemTab:function(event){
+    var index = product.getDataSet(event,'index');
+    this.setData({
+      currentTabsIndex:index
+    });
+  },
 })
