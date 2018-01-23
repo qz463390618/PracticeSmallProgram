@@ -15,7 +15,7 @@ class Cart extends Base{
   * counts - {int} 商品数量
   */
  add(item,counts){
-  var cartData = this.getCarDataFromLocal();
+  var cartData = this.getCartDataFromLocal();
   var isHasInfo = this._isHasThatOne(item.id,cartData);
   if(isHasInfo.index == -1){
     item.counts = counts;
@@ -28,7 +28,7 @@ class Cart extends Base{
  }
 
   //从微信缓存中获取购物车数据
- getCarDataFromLocal(){
+ getCartDataFromLocal(){
    var res = wx.getStorageSync(this._storageKeyName);
    if(!res){
      res = [];
@@ -42,12 +42,13 @@ class Cart extends Base{
   
    */
  _isHasThatOne(id,arr){
-    var item,result = { 'index': -1};
-    for(let i = 0;i < arr.length; i++){
+    var item,
+        result = { 'index': -1 };
+    for(var i = 0;i < arr.length; i++){
       item = arr[i];
       if(item.id == id){
         result = {
-          'id': i,
+          'index': i,
           'data':item
         };
         break;
@@ -55,6 +56,19 @@ class Cart extends Base{
     }
     return result;
  }
+
+  /*
+   * 计算购物车内商品总数量
+   */
+  getCartTotalCounts(){
+    var data = this.getCartDataFromLocal();
+    var counts = 0;
+    for(let i = 0; i < data.length; i++){
+      counts += data[i].counts;
+    }
+    return counts;
+  }
+
 }
 
 export {Cart};
