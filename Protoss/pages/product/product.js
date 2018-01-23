@@ -54,6 +54,10 @@ Page({
 
   onAddingToCartTap:function(event){
     this.addToCart();
+    //var counts = this.data.cartTotalCount + this.data.productCounts;
+    this.setData({
+      'cartTotalCounts': cart.getCartTotalCounts()
+    });
   },
   addToCart:function(){
     var tempObj = {};
