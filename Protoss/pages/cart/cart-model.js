@@ -65,7 +65,7 @@ class Cart extends Base{
     var data = this.getCartDataFromLocal();
     var counts = 0;
     for(let i = 0; i < data.length; i++){
-      if(flag){
+      if (falg){
         if(data[i].selectStatus){
           counts += data[i].counts;
         }
@@ -76,6 +76,60 @@ class Cart extends Base{
     return counts;
   }
 
+  /**
+   * 修改商品数量
+   * params:
+   * id - {int} 商品id
+   * counts - {int} 数量
+   */
+  _changeCounts(id,counts){
+    var cartData = this.getCartDataFromLocal();
+    var hasInfo = this._isHasThatOne(id,cartData);
+    if(hasInfo.index != -1){
+      if(hasInfo.data.counts > 1){
+        cartData[hasInfo.index].counts += counts;
+      }
+    }
+    wx.setStorageSync(this._storageKeyName, cartData) //更新本地缓存
+  }
+
+  /**
+   * 增加商品数目
+   */
+  addCounts(id) {
+    this._changeCounts(id,1);
+  }
+
+  /**
+   * 减少商品数目
+   */
+  cutCounts(id){
+    this._changeCounts(id,-1);
+  }
+
+  /**
+   * 删除商品
+   */
+  delete(ids){
+    if(!(ids instanceof Array)){
+      ids = [ids];
+    }
+    var cartData = this.getCartDataFromLocal();
+    for(let i = 0; i < ids.length;i ++){
+      var hasInfo = this._isHasThatOne(ids[i], cartData);
+      if(hasInfo.index != -1){
+        cartData.splice(hasInfo.index,1);//删除数组中的某一项
+      }
+    }
+    wx.setStorageSync(this._storageKeyName, cartData) //更新本地缓存
+  }
+
+  /**
+   * 本地缓存 保存 更新
+   */
+  execSetStorageSync(data) {
+    wx.setStorageSync(this._storageKeyName,data)
+  }
 }
 
 export {Cart};

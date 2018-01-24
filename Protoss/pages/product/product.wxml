@@ -3,7 +3,7 @@
   <view class="detail-header-box">
 
     <view class="fixed-btns-box">
-      <view class="fixed-cart">
+      <view class="fixed-cart" bindtap="onCartTap">
         <image src="../../imgs/icon/cart@top.png"></image>
         <view wx:if="{{cartTotalCounts > 0}}">{{cartTotalCounts}}</view>
       </view>

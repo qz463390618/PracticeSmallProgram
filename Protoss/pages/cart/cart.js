@@ -25,6 +25,13 @@ Page({
   },
 
   /**
+   * 当页面被隐藏的时候
+   */
+  onHide: function () {
+    cart.execSetStorageSync( this.data.cartData)
+  },
+
+  /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
@@ -78,7 +85,14 @@ Page({
    * 全选按钮事件
    */
   toggleSelectAll:function(event){
-
+    var status = cart.getDataSet(event,'status') == 'true';
+    var data = this.data.cartData;
+    var len = data.length;
+    for (let i = 0;i < len; i++){
+      data[i].selectStatus = !status;
+    }
+    //调用重新计算方法
+    this._resetCartData();
   },
   //加载数据
   _loadData:function(){
@@ -110,4 +124,36 @@ Page({
       'cartData': this.data.cartData
     });
   },
+
+  //修改商品数量
+  changeCounts:function(event){
+    var id = cart.getDataSet(event, 'id');
+    var type = cart.getDataSet(event,'type');
+    var index = this._getProductIndexByID(id);
+    var counts = 1;
+    
+    if(type == 'add'){
+      cart.addCounts(id);
+    }else{
+      counts = -1;
+      cart.cutCounts(id);
+    }
+    this.data.cartData[index].counts += counts;
+    //调用重新计算方法
+    this._resetCartData();
+  },
+
+  //删除商品
+  delete:function(event){
+    var id = cart.getDataSet(event,'id');
+    var index = this._getProductIndexByID(id);
+
+    this.data.cartData.splice(index,1);//删除某一项商品
+    //调用重新计算方法
+    this._resetCartData();
+    cart.delete(id);
+  },
+
+  //创建订单
+  
 })

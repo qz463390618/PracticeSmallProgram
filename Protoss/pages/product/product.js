@@ -52,6 +52,7 @@ Page({
     });
   },
 
+  //添加商品到购物车
   onAddingToCartTap:function(event){
     this.addToCart();
     //var counts = this.data.cartTotalCount + this.data.productCounts;
@@ -59,6 +60,7 @@ Page({
       'cartTotalCounts': cart.getCartTotalCounts()
     });
   },
+  //添加商品到购物车
   addToCart:function(){
     var tempObj = {};
     var keys = ['id','name','main_img_url','price'];
@@ -68,5 +70,12 @@ Page({
       }
     }
     cart.add(tempObj,this.data.productCounts);
+  },
+  
+  //跳转到购物车页面
+  onCartTap:function(event){
+    wx.switchTab({
+      url: '/pages/cart/cart',
+    })
   },
 })
