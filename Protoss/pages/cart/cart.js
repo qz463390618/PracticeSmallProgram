@@ -154,6 +154,16 @@ Page({
     cart.delete(id);
   },
 
+  //查看商品详情
+  onProductsItemTap:function(event){
+
+  },
+
+
   //创建订单
-  
+  submitOrder:function(event){
+    wx.navigateTo({
+      url: '../order/order?account=' + this.data.account +'&from=cart',
+    })
+  },
 })

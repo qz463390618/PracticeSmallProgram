@@ -28,10 +28,19 @@ class Cart extends Base{
  }
 
   //从微信缓存中获取购物车数据
- getCartDataFromLocal(){
+ getCartDataFromLocal(flag){
    var res = wx.getStorageSync(this._storageKeyName);
    if(!res){
      res = [];
+   }
+   if(flag){
+     var newRes = [];
+     for (let i = 0; i < res.length; i++){
+       if(res[i].selectStatus){
+         newRes.push(res[i]);
+       }
+     }
+     res = newRes;
    }
    return res;
  }
@@ -61,11 +70,11 @@ class Cart extends Base{
    * 计算购物车内商品总数量
    * falg true 考虑商品选择状态
    */
-  getCartTotalCounts(falg){
+  getCartTotalCounts(flag){
     var data = this.getCartDataFromLocal();
     var counts = 0;
     for(let i = 0; i < data.length; i++){
-      if (falg){
+      if (flag){
         if(data[i].selectStatus){
           counts += data[i].counts;
         }

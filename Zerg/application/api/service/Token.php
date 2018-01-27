@@ -111,4 +111,15 @@ class Token
         }
         return false;
     }
+
+    //检测token是否有效
+    public static function verifyToken($token)
+    {
+        $exists = Cache::get($token);
+        if($exists){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

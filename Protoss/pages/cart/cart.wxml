@@ -6,7 +6,7 @@
 
     <view class="cart-box">
       <block wx:for="{{cartData}}" wx:key="">
-        <view class="cart-item" bindtap="">
+        <view class="cart-item">
           <view class="cart-item-main">
             <!--购物车的选中按钮 -->
             <view class="cart-item-checkbox" bindtap="toggleSelect" data-id="{{item.id}}" data-status="{{item.selectStatus}}">
@@ -42,14 +42,13 @@
     </view>
     
     <view class="footer-account-box all-accounts-box">
+      <!-- 全选按钮  -->
       <view class="all-select" bindtap="toggleSelectAll" data-status="{{selectedTypeCounts == cartData.length ? 'true':'false'}}">
-
         <image wx:if="{{selectedTypeCounts == cartData.length}}" class="title-icon" src="../../imgs/icon/all@selected.png"></image>
         <image wx:else class="title-icon" src="../../imgs/icon/all.png"></image>
         <text>全选({{selectedCounts}})</text>
-
       </view>
-
+      <!--下单  -->
       <view class="all-price-submit {{account == 0 ? 'disabled':'' }}" bindtap="submitOrder">
         <view class="accounts-btn">下单</view>
         <view class="price-text">￥{{account}}</view>
