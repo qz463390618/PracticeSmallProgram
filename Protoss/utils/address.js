@@ -1,6 +1,7 @@
 
 import {Comfig} from './config.js';
-class Address{
+import { Base } from './base.js';
+class Address extends Base{
   constructor(){
     super();
   }
@@ -27,10 +28,11 @@ class Address{
   //更新保存地址
   submitAddress(data,callback){
     data = this._setUpAddress(data);
+    console.log(data);
     var param = {
-      url :'address',
-      type : 'post',
-      data : data,
+      url:'address',
+      type:'POST',
+      data:data,
       sCallback:function(res){
         callback && callback(true,res);
       },
@@ -45,13 +47,28 @@ class Address{
   _setUpAddress(res){
     var fromData = {
       name:res.userName,
-      provice:res.proviceName,
-      city:res.ciryName,
+      province:res.provinceName,
+      city: res.cityName,
       country:res.countyName,
       mobile:res.telNumber,
       detail:res.detailInfo
     };
     return fromData;
+  }
+
+  // 获得我自己的收货地址
+  getAddress(callback){
+    var that = this;
+    var param = {
+      url:'address',
+      sCallback:function(res){
+        if(res){
+          res.totalDetail = that.setAddressInfo(res);
+          callback && callback(res);
+        }
+      }
+    };
+    this.request(param);
   }
 }
 

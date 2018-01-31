@@ -1,9 +1,9 @@
 
-import { Comfig } from './config.js';
-class Toekn{
+import { Config } from './config.js';
+class Token{
   constructor(){
-    this.verifyUrl = Config.resUrl + 'token/verify';
-    this.tokenUrl = Config.resUrl + 'token/user';
+    this.verifyUrl = Config.restUrl + 'token/verify';
+    this.tokenUrl = Config.restUrl + 'token/user';
   }
 
   /**
@@ -21,9 +21,6 @@ class Toekn{
   //从服务器中获取token
   getTokenFromServer(callback){
     var that = this;
-    var params = {
-      url:'token/user?code='
-    };
     wx.login({
       success:function(res){
         wx.request({

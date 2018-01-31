@@ -186,7 +186,7 @@ class Order
                 $status['pass'] = false;
             }
             $status['orderPrice'] += $pStatus['totalPrice'];
-            $status['totalCount'] += $pStatus['count'];
+            $status['totalCount'] += $pStatus['counts'];
             array_push($status['pStatusArray'],$pStatus);
         }
         return $status;
@@ -199,9 +199,11 @@ class Order
         $pStatus = [
             'id' => null,
             'havaStock' => false,
-            'count' => 0,
+            'counts' => 0,
+            'price' => 0,
             'name' => null,
-            'totalPrice' => 0
+            'totalPrice' => 0,
+            'main_img_url' => null
         ];
         for($i = 0; $i < count($products);$i++)
         {
@@ -222,8 +224,10 @@ class Order
             $pStatus['id'] = $product['id'];
             $pStatus['name'] = $product['name'];
             //$pStatus['count'] = $product['count'];
-            $pStatus['count'] = $oCount;
+            $pStatus['counts'] = $oCount;
+            $pStatus['price'] = $product['price'];
             $pStatus['totalPrice'] = $product['price'] * $oCount;
+            $pStatus['main_img_url'] = $product['main_img_url'];
             $pStatus['havaStock'] = ($product['stock'] - $oCount) >= 0 ? true : false;
 
         }

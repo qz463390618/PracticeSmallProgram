@@ -11,5 +11,8 @@ return[
     'token_salt' => 'Zwf5201314Zhangleqiong',
     //微信回调地址
     'pay_back_url' => 'http://www.zengwf.com/api/v1/pay/notify',
+    //'pay_back_url' => 'http://www.zengwf.com/api/v1/pay/re_notify',
+    //'pay_back_url' => 'http://zero.com/api/v1/pay/notify',
+    //'pay_back_url' => 'http://zero.com/api/v1/pay/re_notify',
     //Ngrok
 ];

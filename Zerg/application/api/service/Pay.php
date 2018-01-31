@@ -106,7 +106,7 @@ class Pay
         $rand = md5(time() . mt_rand(0,1000) );
         $jsApiPayData -> SetNonceStr($rand);
         //设置微信预订单id
-        $jsApiPayData -> SetPackage('prepay_id = '.$wxOrder['prepay_id']);
+        $jsApiPayData -> SetPackage('prepay_id=' . $wxOrder['prepay_id']);
         //设置签名算法
         $jsApiPayData -> SetSignType('md5');
         $sign = $jsApiPayData -> MakeSign();

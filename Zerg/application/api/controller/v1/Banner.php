@@ -28,8 +28,6 @@ class Banner
     {
         //AOP  面向切面编程
 
-
-
         //验证器,验证id是不是一个正整数
         (new IDMustBePostiveInt()) -> goCheck();
         $banner = BannerModel::getBannerByID($id);

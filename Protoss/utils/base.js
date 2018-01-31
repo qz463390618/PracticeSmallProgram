@@ -7,8 +7,12 @@ class Base{
     this.baseRequestUrl = Config.restUrl; 
   }
 
-  //重新封装 wx.request()方法
-  request(params){
+  /*
+  * 重新封装 wx.request()方法
+  * 当noRefetch为true时,不做未授权重试机制
+  */
+  
+  request(params,noRefetch){
     var that = this;
     var url = this.baseRequestUrl + params.url;
     if (!params.type){
@@ -19,7 +23,7 @@ class Base{
       data:params.data,
       method: params.type,
       header:{
-        'content-type':'applicatuion/json',
+        'content-type':'application/json',
         'token':wx.getStorageSync('token'),//获取微信缓存
       },
       //成功返回数据
@@ -28,15 +32,19 @@ class Base{
         //   params.sCallBack(res);
         // }
         var code = res.statusCode.toString();
-        var startChar = code.charAr(0);
+        var startChar = code.charAt(0);
         if(startChar == '2'){
           params.sCallback && params.sCallback(res.data);
         }else{ //这里指的是这次请求到了服务器内部,但是因为一些传入参数或者一些问题而出现的出错
           if(code == '401'){ //令牌出现问题
             //重新获取完令牌后,再次去调用用户所访问的路由
-            that._refetch(params);
+            if(!noRefetch){
+              that._refetch(params);
+            }
           }
-          params.eCallback && params.eCallback(res.data);
+          if (noRefetch){
+            params.eCallback && params.eCallback(res.data);
+          }
         }
       },
       //失败返回提示
@@ -49,7 +57,7 @@ class Base{
   _refetch(params){
     var token = new Token();
     token.getTokenFromServer((token) => {
-      this.request(params)
+      this.request(params,true)
     });
   }
 

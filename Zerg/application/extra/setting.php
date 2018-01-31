@@ -13,6 +13,6 @@ return [
     //token时效
     'token_expire_in' => 7200,
     //店铺名
-    'shop_name' => '零食商贩',
+    'shop_name' => '办公家具专卖',
 
 ];
