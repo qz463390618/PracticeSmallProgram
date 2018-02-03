@@ -12,9 +12,16 @@ namespace app\api\model;
 class Category extends BaseModel
 {
     protected $hidden = ['delete_time','update_time','topic_img_id',];
+
     public function Img()
     {
         return $this -> belongsTo('Image','topic_img_id','id');
     }
 
+    public static function getSummaryByPage($page=1,$size=10)
+    {
+        $pageingData = self::order('create_time desc')
+            ->paginate($size,true,['page' => $page]);
+        return $pageingData;
+    }
 }

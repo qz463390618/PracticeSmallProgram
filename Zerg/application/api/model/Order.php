@@ -34,6 +34,7 @@ class Order extends BaseModel
         return json_decode($value);
     }
 
+    //根据用户id所有订单
     public static function getSummaryByUser($uid,$page = 1,$size = 15)
     {
         //Paginator::
@@ -43,4 +44,12 @@ class Order extends BaseModel
         return $paginData;
     }
 
+    public static function getSummaryByPage($page=1,$size=20)
+    {
+        $pageingData = self::order('create_time desc')
+            ->paginate($size,true,['page' => $page]);
+        return $pageingData;
+    }
+
+    //修改顶站
 }

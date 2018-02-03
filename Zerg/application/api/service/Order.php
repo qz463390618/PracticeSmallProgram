@@ -8,13 +8,17 @@
  */
 
 namespace app\api\service;
+
 use app\api\model\OrderProduct;
 use app\api\model\Product;
+use app\api\model\Order as OrderModel;
 use app\api\model\UserAddress;
+use app\lib\enum\OrderStatusEnum;
 use app\lib\exception\OrderException;
 use app\lib\exception\UserException;
 use think\Db;
 use think\Exception;
+
 
 /**
  * 订单类
@@ -232,5 +236,24 @@ class Order
 
         }
         return $pStatus;
+    }
+
+    public function delivery($orderID,$jumpPage = '')
+    {
+        $order = OrderModel::where('id','=',$orderID)->find();
+        if(!$order){
+            throw new OrderException();
+        }
+        if($order -> status != OrderStatusEnum::PAID){
+            throw new OrderException([
+                'mag' => '还没付款呢,想干吗?或者你已经更新过订单了,不要在刷了',
+                'errorCode' => 80002,
+                'code' => 403,
+            ]);
+        }
+        $order -> status = OrderStatusEnum::DELIVERED;
+        $order -> save();
+        $message = new DeliveryMessage();
+        return $message -> sendDeliveryMessage($order,$jumpPage);
     }
 }

@@ -1,0 +1,115 @@
+.desktop .desktop-main {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-left: 45px;
+    padding-bottom: 320px;
+}
+.desktop .category-box {
+    height: 100%;
+    margin: 0;
+}
+.desktop .category-box table {
+    width: 100%;
+    min-width: 390px;
+    border-collapse: collapse;
+}
+.desktop .category-box table thead tr {
+    height: 50px;
+    line-height: 50px;
+}
+.desktop .category-box table thead tr td {
+    border-bottom: 2px solid #3d6ba4;
+    border-collapse: collapse;
+    margin: 0;
+    color: #212121;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+.desktop .category-box table tbody tr {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #555555;
+}
+.desktop .category-box table tbody tr:nth-child(2n) {
+    background-color: rgba(85, 85, 85, 0.1);
+}
+.desktop .category-box table td {
+    text-align: center;
+    padding-left: 4px;
+
+}
+.desktop .category-box table tbody td{
+    border-left:1px solid #000;
+    border-bottom:1px solid #000;
+}
+.desktop .category-box table tbody td:last-child{
+    border-right:1px solid #000;
+}
+.desktop .category-box table td > div {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.desktop .category-box table td .category-status-txt {
+    padding: 4px 8px;
+    border-radius: 2px;
+    color: white;
+    background-color: #333333;
+}
+.desktop .category-box table td .category-status-txt.unpay {
+    background-color: #B42F2D;
+}
+.desktop .category-box table td .category-status-txt.payed {
+    background-color: #AB956D;
+}
+.desktop .category-box table td .category-status-txt.done {
+    background-color: #57AB53;
+}
+.desktop .category-box table td .category-btn {
+    padding: 4px 15px;
+    border-radius: 2px;
+    color: white;
+    background-color: #333333;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    margin-left:10px;
+}
+.desktop .category-box table td .category-btn.done {
+    background-color: #57AB53;
+}
+.desktop .category-box table td .category-btn.unstock {
+    background-color: #B42F2D;
+}
+.desktop .category-box table td .category-btn:hover {
+    box-shadow: 0 0 6px #000000;
+}
+.desktop .category-box table td .category-btn.detail {
+    background-color: #3d77ff;
+}
+.desktop .category-box .load-more,
+.desktop .category-box .no-more {
+    width: 100px;
+    margin: 30px auto;
+    font-size: 12px;
+    text-align: center;
+}
+.desktop .category-box .load-more {
+    padding: 5px 0;
+    cursor: pointer;
+    background-color: #777;
+    border-radius: 5px;
+    color: #fff;
+}
+.desktop .category-box .load-more:hover {
+    background-color: #555;
+}
+.desktop .category-box .no-more {
+    display: none;
+    color: #999;
+}

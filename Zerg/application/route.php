@@ -17,12 +17,16 @@ return [
         'name' => '\w+',
     ],
     '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
+        ':id'   => ['order/hello', ['method' => 'get'], ['id' => '\d+']],
+        ':name' => ['order/hello', ['method' => 'post']],
     ],
 
 ];
 */
+
+
+//php think optimize:route
+
 
 //轮播图接口
 Route::get('api/:version/banner/:id','api/:version.Banner/getBanner');
@@ -36,9 +40,24 @@ Route::get('api/:version/product/by_category','api/:version.Product/getAllInCate
 Route::get('api/:version/product/recent','api/:version.Product/getRecent');
 Route::get('api/:version/product/:id','api/:version.Product/getOne',[],['id' => '\d+']);
 //获取所有分类
-Route::get('api/:version/category/all','api/:version.Category/getAllCatrgories');
+//Route::get('api/:version/category/all','api/:version.Category/getAllCategories');
+//分页获取所有分类
+Route::get('api/:version/category/page_all','api/:version.Category/getSummary');
+
+//分类
+Route::group('api/:version/category',function(){
+    //小程序获取所有的分类
+    Route::get('all','api/:version.Category/getAllCategories');
+    //cms获取所有的分类并分页
+    Route::get('page_all','api/:version.Category/getSummary');
+    //获取分类页的总页数
+    Route::get('count_page','api/:version.Category/getListCount');
+});
+
 //获取Token
 Route::post('api/:version/token/user','api/:version.Token/getToken');
+//获取第三方应用Token
+Route::post('api/:version/token/app','api/:version.Token/getAppToken');
 //验证Token
 Route::post('api/:version/token/verify','api/:version.Token/verifyToken');
 //新增或修改地址
@@ -51,7 +70,8 @@ Route::post('api/:version/order','api/:version.Order/placeOrder');
 Route::get('api/:version/order/:id','api/:version.Order/getDetail',[],['id'=>'\d+']);
 //获取用户所有订单
 Route::get('api/:version/order/by_user','api/:version.Order/getSummaryByUser');
-
+Route::get('api/:version/order/paginate','api/:version.Order/getSummary');
+Route::post('api/:version/order/delivery','api/:version.Order/delivery');
 
 //预订单
 Route::post('api/:version/pay/pre_order','api/:version.Pay/getPerOrder');
@@ -61,8 +81,3 @@ Route::post('api/:version/pay/notify','api/:version.Pay/receiveNotify');
 Route::post('api/:version/pay/re_notify','api/:version.Pay/redirectNotify');
 
 
-
-
-
-//测试删除
-Route::post('api/:version/order/del','api/:version.Order/del');

@@ -12,6 +12,11 @@ namespace app\api\model;
 
 class Banner extends BaseModel
 {
+
+    //php think optimize:schema   生成数据库缓存信息
+
+
+
     //自定义表名
     //protected $table = 'banner_item';
     protected $hidden = ['delete_time','update_time'];

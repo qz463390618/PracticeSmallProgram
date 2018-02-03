@@ -25,7 +25,7 @@ class Token
         $randChars = getRandChar(32);
         //用三组字符串,进行md5加密
         $timestamp = $_SERVER['REQUEST_TIME_FLOAT'];
-        //salt 盐
+        //salt 盐值
         $salt =config('secure.token_salt');
         return md5($randChars.$timestamp.$salt);
     }
@@ -37,7 +37,6 @@ class Token
         $token = Request::instance()
                 ->header('token');
         $vars = Cache::get($token);
-        //var_dump($vars);die;
         if(!$vars)
         {
             throw new TokenException();

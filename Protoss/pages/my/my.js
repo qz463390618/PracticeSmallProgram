@@ -118,7 +118,7 @@ Page({
 
         //更新订单状态
         if(flag){
-          //that.data.orderArr[index].status = 2;
+          //that.data.orderArr[order].status = 2;
           that.data.orderArr[index].status = 2;
           that.setData({
             orderArr: that.data.orderArr
